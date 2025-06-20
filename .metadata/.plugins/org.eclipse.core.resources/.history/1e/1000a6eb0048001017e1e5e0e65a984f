@@ -1,0 +1,118 @@
+package com.practice;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class FirstExecution {
+
+	public static void main(String[] args) {
+		
+		String word= "Siva balan";
+		
+		String[] split = word.split(" ");
+		
+		int length = split.length;
+		
+		System.out.println("number of words in string "+word+ "is " + length);
+		
+		}
+	}
+		
+//		String word="sivabalans";
+//		
+//		Map<Character, Integer> map= new LinkedHashMap<Character, Integer>();
+//		
+//		for(char ch: word.toCharArray()) {
+//			map.put(ch, map.getOrDefault(ch, 0) +1);
+//		}
+//		
+//		System.out.println("Non-Repetative character found in : "+ word);
+//		
+//		//finding non-repetative element
+////		for(Map.Entry<Character, Integer> entry: map.entrySet()) {
+////			if(entry.getValue()==1) {
+////				System.out.print(entry.getKey());
+////			}
+////			
+////		}
+//		
+//		//finding repetative element
+//		for(Map.Entry<Character, Integer> entry: map.entrySet()) {
+//			if(entry.getValue()>1) {
+//				System.out.println(entry.getKey());
+//			}
+//		}
+//		
+//		System.out.print("---Repetative elements are found");
+////		System.out.print("---Non-Repetative elements are found");
+//		}
+//	}
+//		
+//		int num= 1234;
+//		int rev= 0;
+//		
+//		while(num>0) {
+//			
+//			int n= num%10;
+//			rev= (rev*10)+n;
+//			num/=10;
+//		}
+		
+//		System.out.println(rev);
+		
+//		String word= "sivabalan";
+//		
+//		String rev= "";
+//		
+//		for(int i= word.length()-1; i>=0; i--) {
+//			
+//			rev= rev+ word.charAt(i);
+//			
+//		}
+//		System.out.println(rev);
+//	}
+//	}
+		
+//		
+//		String word= "sivabalans";
+//		
+//		Map<Character, Integer> map= new LinkedHashMap<Character, Integer>();
+//		
+//		for(char ch: word.toCharArray()) {
+//			
+//			map.put(ch, map.getOrDefault(ch, 0) +1);
+//			
+//		}
+//		
+//		System.out.println("Repetative element found: ");
+//		
+//		for(Map.Entry<Character, Integer> entry : map.entrySet()) {
+//			
+//			if(entry.getValue()>1) {
+//				System.out.print(entry.getKey());
+//			}
+//		}
+		
+
+//		String word = "sivabalan";
+//
+//		Map<Character, Integer> charCount = new LinkedHashMap<Character, Integer>();
+//
+//		for (char ch : word.toCharArray()) {
+//
+//			charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
+//
+//		}
+//
+//		System.out.println(" Non-Repetative found: ");
+//
+//		for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
+//
+//			if (entry.getValue() == 1) {
+//
+//				System.out.print(entry.getKey());
+//			}
+//
+//		}
+
+	

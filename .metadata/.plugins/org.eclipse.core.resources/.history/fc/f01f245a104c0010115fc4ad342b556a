@@ -1,0 +1,13 @@
+package com.testbasic;
+
+import org.openqa.selenium.WebDriver;
+
+public class Actions {
+
+	public Actions(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

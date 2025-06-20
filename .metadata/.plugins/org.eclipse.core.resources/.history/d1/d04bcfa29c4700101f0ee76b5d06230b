@@ -1,0 +1,34 @@
+package com.webpage;
+
+import org.testng.annotations.Test;
+
+public class HYR_Utility extends BaseClass {
+	
+	public static void main(String[] args) {
+		
+//		@Test
+//		public void serchHotel(String username, String password, String URL) {
+			
+		browserLaunch();
+		findElementById("https://adactinhotelapp.com/index.php");
+		findElementById("sbala018");
+		findElementById("6K29GQ");
+//		buttonClick()
+		
+	}
+
+	}
+		
+	
+//	public void logInHYR() {
+//		// TODO Auto-generated method stub
+//		BaseClass bs= new BaseClass();
+//		bs.enterText();
+//		System.out.println("navigated HYR");
+//
+//	}
+	
+	
+	
+
+//}

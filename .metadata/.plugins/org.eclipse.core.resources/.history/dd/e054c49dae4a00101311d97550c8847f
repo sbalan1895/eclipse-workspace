@@ -1,0 +1,8 @@
+package com.testbasic;
+
+public class SeleniumPracs {
+	public static void main(String[] args) {
+		
+	}
+
+}
