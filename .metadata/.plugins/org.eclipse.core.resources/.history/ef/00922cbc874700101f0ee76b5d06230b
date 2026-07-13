@@ -1,0 +1,30 @@
+package com.webpage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseClass {
+
+
+	WebDriver driver;
+
+
+	public void enterText() {
+
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+
+
+	}
+
+	public void naviURL (String URL) {
+		driver.get(URL);	
+		//		https://www.hyrtutorials.com/p/basic-controls.html
+		//		driver.get("https://adactinhotelapp.com/index.php");
+	}
+
+
+
+}

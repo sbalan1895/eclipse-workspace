@@ -1,0 +1,82 @@
+package com.testbasic;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.interactions.Actions;
+import org.jspecify.annotations.Nullable;
+import org.openqa.selenium.*;
+public class BasicTest {
+
+//	public static void main(String[] args) throws InterruptedException {
+
+	WebDriver driver;
+	WebDriverWait waits;
+
+	@BeforeClass
+	public void login() throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		// span[@class='oxd-userdropdown-tab']
+	}
+
+	@Test
+	public void loginUser() {
+//			driver.findElement(By.xpath("//div[@class='oxd-topbar-header-userarea']]")).click();
+
+		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement loginUser = waits
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='oxd-userdropdown-name']")));
+
+//			WebElement loginUser = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/p"));
+		// *[text()='Bogdan Black']
+		System.out.println(loginUser.getText());
+
+		if (loginUser.equals("Dienes Stein")) {
+			System.out.println("Login verified successfully");
+		} else {
+			System.out.println("Login verfied failed");
+		}
+	}
+		@Test
+		public void adminClk() {
+
+		WebElement adminClick = waits.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='oxd-main-menu-item'])[1]")));
+		adminClick.click();
+		
+		waits.until(ExpectedConditions.urlToBe("https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers"));
+		@Nullable
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println("Navigated to URL " +currentUrl);
+
+//		Actions actions= new Actions(driver);
+//		actions.moveToElement(adminClick).build().perform();
+//		
+		
+	}
+
+	
+	@AfterMethod
+	@AfterClass
+	public void tearDown() {
+//			driver.quit();
+	}
+
+}

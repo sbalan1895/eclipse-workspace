@@ -1,0 +1,47 @@
+package com.selenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class WebTable {
+
+	WebDriver driver;
+
+	@Test
+	public void webtable() {
+
+		WebDriverManager.chromedriver().setup();
+		driver= new ChromeDriver();
+		driver.get("https://www.tutorialspoint.com/selenium/practice/webtables.php");
+		driver.manage().window().maximize();
+
+		WebElement Table = driver.findElement(By.xpath("//table[@class='table table-striped mt-3']"));
+
+		//			System.out.println(Table.getText());
+
+		List<WebElement> rows = Table.findElements(By.tagName("tr"));
+
+		for(WebElement row: rows) {
+
+			List<WebElement> columns = row.findElements(By.tagName("td"));
+
+			for(WebElement column : columns ) {
+
+				System.out.println(column.getText()+ " ");
+			}
+
+		}
+		System.out.println("   ");
+//		System.out.println("table values inspected");
+						driver.quit();
+	}
+
+}
+

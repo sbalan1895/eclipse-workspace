@@ -1,0 +1,44 @@
+package com.selenium;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DatePickerExample {
+	
+	public static void main(String[] args) {
+		
+		WebDriver driver;
+
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.globalsqa.com/demo-site/datepicker/");
+        
+        driver.switchTo().frame(driver.findElement(By.className("demo-frame lazyloaded")));
+        
+        WebDriverWait waits= new WebDriverWait(driver, Duration.ofSeconds(10));
+        
+        WebElement datepicker = waits.until(ExpectedConditions.visibilityOfElementLocated(By.id("datepicker")));
+        datepicker.click();
+        
+        System.out.println("DatePicker opened");
+        
+        WebElement date20 = waits.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='20']")));
+        date20.click();
+        
+        System.out.println("Date 20 is selected");
+//        datepicker
+      //a[text()='20']
+	}
+
+}

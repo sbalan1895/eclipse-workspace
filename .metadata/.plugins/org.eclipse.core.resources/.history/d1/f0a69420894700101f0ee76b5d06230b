@@ -1,0 +1,10 @@
+package com.pojoclass;
+
+public class logIn {
+	
+	public SearchHotel_Pojo() {
+		
+		@FindBy()
+	} 
+
+}

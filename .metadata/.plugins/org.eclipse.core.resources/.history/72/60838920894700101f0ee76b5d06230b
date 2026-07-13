@@ -1,0 +1,11 @@
+package com.pojoclass;
+
+public class SearchHotel_Pojo {
+	
+	public PojoClass() {
+		
+		
+		
+	}
+
+}

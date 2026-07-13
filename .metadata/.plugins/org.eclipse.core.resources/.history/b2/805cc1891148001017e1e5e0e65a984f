@@ -1,0 +1,15 @@
+package com.webpage;
+
+import org.testng.annotations.Test;
+
+public class Utility1 extends Base1{
+	
+	@Test
+	public void LoginHotel() {
+		
+		Pojo1 pj = new Pojo1(driver);
+		pj.LoginAdacin("sbala018", "6K29GQ");
+		
+	}
+
+}

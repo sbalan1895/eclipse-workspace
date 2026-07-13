@@ -1,0 +1,51 @@
+package com.webpage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Pojo1 extends Base1{
+	
+WebDriver driver;
+	
+	
+	
+	@FindBy(id="username")
+	private WebElement username;
+	
+	@FindBy(id="password")
+	private WebElement password;
+	
+	@FindBy(id="login")
+	private WebElement btnclick;
+	
+	
+	public WebElement getUsername() {
+		return username;
+	}
+	
+	public WebElement getPassword() {
+		return password;
+	}
+	
+	public WebElement getBtnClick() {
+		return btnclick;
+	}
+	
+	public Pojo1(WebDriver driver) {
+		this.driver= driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+		
+	public void LoginAdacin(String username, String password){
+		enterText(getUsername(), username);
+		enterText(getPassword(), password);
+		buttonClick(btnclick);
+		
+	}	
+	 
+
+}
