@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="createassetsuite" verbose="1">
+  <test name="internetAssetCreate">
+    <classes>
+      <class name="invoicesModule.DataAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="privateLineAssetCreate">
+    <classes>
+      <class name="invoicesModule.DataAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="mplsAssetCreate">
+    <classes>
+      <class name="invoicesModule.DataAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+    <test name="dedicatedAccessAssetCreate">
+    <classes>
+      <class name="invoicesModule.DataAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="InternetPortAssetCreate">
+    <classes>
+      <class name="invoicesModule.InternetPortAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="PrivateLineAssetCreate">
+    <classes>
+      <class name="invoicesModule.PrivateLineAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+   <test name="DedicatedAccessAssetCreate">
+    <classes>
+      <class name="invoicesModule.DedicatedAccessAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MPLSAssetCreate">
+    <classes>
+      <class name="invoicesModule.MPLSAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="FramePortsAssetCreate">
+    <classes>
+      <class name="invoicesModule.FramePortsAssetCreationData">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="ATMPortsAssetCreate">
+    <classes>
+      <class name="invoicesModule.ATMPortsAssetCreationData">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+   <test name="LocalAssetCreate">
+    <classes>
+      <class name="invoicesModule.LocalAssetCreationVoice">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+   <test name="LocalAssetCreateANICircuitID">
+    <classes>
+      <class name="invoicesModule.LocalAssetCreationVoiceWithANIandCircuitID">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+   <test name="LDAssetCreate">
+    <classes>
+      <class name="invoicesModule.LDAssetCreationVoice">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="ConferencingAssetCreate">
+    <classes>
+      <class name="invoicesModule.ConferencingAssetCreationVoice">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="EquipmentAssetCreate">
+    <classes>
+      <class name="invoicesModule.EquipmentAssetCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+   <test name="EquipmentAssetCreateLease">
+    <classes>
+      <class name="invoicesModule.EquipmentAssetCreationLease">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SampleSuite" verbose="1">
+  <test name="NewInvoiceCreate">
+    <classes>
+      <class name="invoicesModule.NewInvoiceCreation">
+      	
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="InvoiceSearchbyInvoiceStatus">
+    <classes>
+      <class name="invoicesModule.InvoiceSearchbyAllStatus">
+      	
+      </class>
+      
+    </classes>
+  </test> <!-- Test -->
+  <test name="reportCreateDateRange">
+    <classes>
+      <class name="invoicesModule.ReportInvoiceMaster">
+      	
+      </class>
+      
+    </classes>
+    
+  </test> <!-- Test -->
+  <test name="reportCreateInvoiceNum">
+    <classes>
+      <class name="invoicesModule.ReportInvoiceMaster">
+      	
+      </class>
+      
+    </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
